@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="h1">40sp</dimen>
+    <dimen name="h2">36sp</dimen>
+    <dimen name="h5">20sp</dimen>
+    <dimen name="h6">16sp</dimen>
+    <dimen name="main_icon_size">24dp</dimen>
+    <dimen name="main_btn_h_size">120dp</dimen>
+    <dimen name="main_tx_size">18sp</dimen>
+    <dimen name="main_bg_tx_size">10sp</dimen>
+    <dimen name="box_list_ver_tx_margin">5dp</dimen>
+</resources>

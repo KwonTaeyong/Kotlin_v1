@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.outprodD.outprodDBtnListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/outprodDBtnList_home_btn"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/home_btn_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/house_solid2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/outprodDBtnList_tx_top"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="국내 출고"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h5"
+            android:fontFamily="@font/nanumsquareneo_deb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <RelativeLayout
+        android:id="@+id/outprodDBtnList_bt_out_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintVertical_bias="0.05"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_outprodDBtnList_bt_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/outprodDBtnList_bt_out"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:paddingHorizontal="30dp"
+                android:background="@drawable/box_shape_round"
+                android:textStyle="bold"
+                android:text="출고 지시"
+                android:textSize="@dimen/main_tx_size" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/outprodDBtnList_bt_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/outprodDBtnList_bt_out_ly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@+id/outprodDBtnList_bt_out_ly"
+        app:layout_constraintVertical_bias="0.1"
+        >
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_outprodDBtnList_bt_A"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+            <Button
+                android:id="@+id/outprodDBtnList_bt_save"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:paddingHorizontal="30dp"
+                android:background="@drawable/box_shape_round"
+                android:text="보관 창고"
+                android:textStyle="bold"
+                android:textSize="@dimen/main_tx_size"
+                android:backgroundTint="@color/now_color"
+                ></Button>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.test.testFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/prod_tx_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/test_scan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/h5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/test_ly_bc"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        android:background="@drawable/table_border"
+        >
+
+        <TextView
+            android:id="@+id/test_tv_bc_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="5dp"
+            android:text="스캔 코드 : "/>
+
+
+        <TextView
+            android:id="@+id/test_tv_bc_val"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/box_shape_input_label"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/test_tv_bc_lb"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text=""/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/test_ly_prod"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/test_ly_bc"
+        android:background="@drawable/table_border"
+        >
+
+        <TextView
+            android:id="@+id/test_tv_prod_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/test_tv_qt_lb"
+            android:layout_marginStart="5dp"
+            android:text="품목 코드 : "/>
+
+
+        <TextView
+            android:id="@+id/test_tv_prod_val"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/box_shape_input_label"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/test_tv_prod_lb"
+            app:layout_constraintTop_toTopOf="@id/test_tv_prod_lb"
+            app:layout_constraintBottom_toBottomOf="@id/test_tv_prod_lb"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text=""/>
+
+
+        <TextView
+            android:id="@+id/test_tv_qt_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/test_tv_prod_lb"
+            android:layout_marginStart="5dp"
+            android:text="수량 : "/>
+
+        <TextView
+            android:id="@+id/test_tv_qt_val"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:background="@drawable/box_shape_input_label"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/test_tv_prod_val"
+            app:layout_constraintTop_toTopOf="@id/test_tv_qt_lb"
+            app:layout_constraintBottom_toBottomOf="@id/test_tv_qt_lb"
+            app:layout_constraintEnd_toEndOf="@+id/test_tv_prod_val"
+            android:text=""/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/test_ly_prod"
+        android:background="@drawable/table_border"
+        >
+
+        <TextView
+            android:id="@+id/test_tv_pdname_lb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="5dp"
+            android:text="품목 명   : "/>
+
+
+        <TextView
+            android:id="@+id/test_tv_pdname_val"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:background="@drawable/box_shape_input_label"
+            android:gravity="center"
+            android:padding="5dp"
+            app:layout_constraintStart_toEndOf="@id/test_tv_pdname_lb"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text=""/>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/prod_gl_hz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="1" />
+
+    <EditText
+        android:id="@+id/test_ed_scanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/prod_gl_hz" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

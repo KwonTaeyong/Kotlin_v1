@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.vphipda.view.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_androidInfo"
+            app:destination="@id/androidInfo" />
+        <action
+            android:id="@+id/action_mainFragment_to_InprodFragment"
+            app:destination="@id/inprodFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_moveProdFragment"
+            app:destination="@id/moveProdFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_moveWHListFragment"
+            app:destination="@id/moveWHListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sampleScanFragment"
+            app:destination="@id/sampleScanFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_outprodDBtnListFragment"
+            app:destination="@id/outprodDBtnListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_invenFragment"
+            app:destination="@id/invenFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_outprodOBtnListFragment"
+            app:destination="@id/outprodOBtnListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sampleBtnListFragment"
+            app:destination="@id/sampleBtnListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_mainScanFragment"
+            app:destination="@id/mainScanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/androidInfo"
+        android:name="com.example.vphipda.view.fragment.info.AndroidInfo"
+        android:label="fragment_android_info"
+        tools:layout="@layout/fragment_android_info" />
+    <fragment
+        android:id="@+id/inprodFragment"
+        android:name="com.example.vphipda.view.fragment.inprod.InprodFragment"
+        android:label="fragment_inprod"
+        tools:layout="@layout/fragment_inprod" >
+        <action
+            android:id="@+id/action_inprodFragment_to_inprodDetailFragment"
+            app:popUpTo="@id/inprodFragment"
+            app:destination="@id/inprodDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inprodDetailFragment"
+        android:name="com.example.vphipda.view.fragment.inprod.InprodDetailFragment"
+        android:label="fragment_inprod_detail"
+        tools:layout="@layout/fragment_inprod_detail" >
+        <action
+            android:id="@+id/action_inprodDetailFragment_to_inpordDetailListFragment"
+            app:destination="@id/inpordDetailListFragment"/>
+    </fragment>
+    <fragment
+        android:id="@+id/inpordDetailListFragment"
+        android:name="com.example.vphipda.view.fragment.inprod.InpordDetailListFragment"
+        android:label="fragment_inpord_detail_list"
+        tools:layout="@layout/fragment_inpord_detail_list" >
+        <action
+            android:id="@+id/action_inpordDetailListFragment_to_inprodDetailListItemFragment"
+            app:destination="@id/inprodDetailListItemFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_home"
+        app:destination="@+id/mainFragment"
+        app:popUpTo="@id/mainFragment"
+        app:popUpToInclusive="true"
+        />
+
+    <action
+        android:id="@+id/action_inprod"
+        app:destination="@+id/inprodFragment"
+        app:popUpTo="@id/mainFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <action
+        android:id="@+id/action_inprod_detail"
+        app:destination="@+id/inprodDetailFragment"
+        app:popUpTo="@id/inprodFragment"
+        app:popUpToInclusive="false"
+        />
+    <fragment
+        android:id="@+id/moveProdFragment"
+        android:name="com.example.vphipda.view.fragment.move.MoveProdFragment"
+        android:label="fragment_move_prod"
+        tools:layout="@layout/fragment_move_prod" >
+        <action
+            android:id="@+id/action_moveProdFragment_to_moveProdDetailFragment"
+            app:destination="@id/moveProdDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moveWHFragment"
+        android:name="com.example.vphipda.view.fragment.moveWH.MoveWHFragment"
+        android:label="fragment_move_w_h"
+        tools:layout="@layout/fragment_move_w_h" />
+    <fragment
+        android:id="@+id/moveWHDetailFragment"
+        android:name="com.example.vphipda.view.fragment.moveWH.MoveWHDetailFragment"
+        android:label="fragment_move_w_h_detail"
+        tools:layout="@layout/fragment_move_w_h_detail" >
+        <action
+            android:id="@+id/action_moveWHDetailFragment_to_moveWHFragment"
+            app:destination="@id/moveWHFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/moveProdDetailFragment"
+        android:name="com.example.vphipda.view.fragment.move.MoveProdDetailFragment"
+        android:label="fragment_move_prod_detail"
+        tools:layout="@layout/fragment_move_prod_detail" >
+        <action
+            android:id="@+id/action_moveProdDetailFragment_to_moveProdScanFragment"
+            app:destination="@id/moveProdScanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moveProdScanFragment"
+        android:name="com.example.vphipda.view.fragment.move.MoveProdScanFragment"
+        android:label="fragment_move_prod_scan"
+        tools:layout="@layout/fragment_move_prod_scan" />
+
+    <action
+        android:id="@+id/action_moveProdDetail"
+        app:destination="@+id/moveProdDetailFragment"
+        app:popUpTo="@id/moveProdFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <action
+        android:id="@+id/action_moveProd"
+        app:destination="@+id/moveProdFragment"
+        app:popUpTo="@id/mainFragment"
+        app:popUpToInclusive="false"
+        />
+    <fragment
+        android:id="@+id/moveWHListFragment"
+        android:name="com.example.vphipda.view.fragment.moveWH.MoveWHListFragment"
+        android:label="fragment_move_w_h_list"
+        tools:layout="@layout/fragment_move_w_h_list" >
+        <action
+            android:id="@+id/action_moveWHListFragment_to_moveWHDetailFragment"
+            app:destination="@id/moveWHDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sampleScanFragment"
+        android:name="com.example.vphipda.view.fragment.sample.SampleScanFragment"
+        android:label="fragment_sample_scan"
+        tools:layout="@layout/fragment_sample_scan" />
+    <fragment
+        android:id="@+id/outprodDBtnListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodD.outprodDBtnListFragment"
+        android:label="fragment_outprod_d_btn_list"
+        tools:layout="@layout/fragment_outprod_d_btn_list" >
+        <action
+            android:id="@+id/action_outprodDBtnListFragment_to_outprodDOutOrderListFragment"
+            app:destination="@id/outprodDOutOrderListFragment" />
+        <action
+            android:id="@+id/action_outprodDBtnListFragment_to_outprodDSaveScanFragment"
+            app:destination="@id/outprodDSaveScanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outprodDOutOrderListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodD.outprodDOutOrderListFragment"
+        android:label="fragment_outprod_d_out_order_list"
+        tools:layout="@layout/fragment_outprod_d_out_order_list" >
+        <action
+            android:id="@+id/action_outprodDOutOrderListFragment_to_outprodDOutScanFragment"
+            app:destination="@id/outprodDOutScanFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_outprodDOutOrderList"
+        app:destination="@+id/outprodDOutOrderListFragment"
+        app:popUpTo="@id/outprodDBtnListFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <action
+        android:id="@+id/action_outprodDOutScan"
+        app:destination="@+id/outprodDOutScanFragment"
+        app:popUpTo="@id/outprodDOutOrderListFragment"
+        app:popUpToInclusive="false"
+        />
+
+
+
+    <fragment
+        android:id="@+id/outprodDOutListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodD.outprodDOutListFragment"
+        android:label="fragment_outprod_d_out_list"
+        tools:layout="@layout/fragment_outprod_d_out_list" />
+    <fragment
+        android:id="@+id/outprodDOutScanFragment"
+        android:name="com.example.vphipda.view.fragment.outprodD.outprodDOutScanFragment"
+        android:label="fragment_outprod_d_out_scan"
+        tools:layout="@layout/fragment_outprod_d_out_scan" >
+        <action
+            android:id="@+id/action_outprodDOutScanFragment_to_outprodDOutListFragment"
+            app:destination="@id/outprodDOutListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outprodDSaveScanFragment"
+        android:name="com.example.vphipda.view.fragment.outprodD.outprodDSaveScanFragment"
+        android:label="fragment_outprod_d_save_scan"
+        tools:layout="@layout/fragment_outprod_d_save_scan" />
+    <fragment
+        android:id="@+id/invenFragment"
+        android:name="com.example.vphipda.view.fragment.inven.InvenFragment"
+        android:label="fragment_inven"
+        tools:layout="@layout/fragment_inven" />
+    <fragment
+        android:id="@+id/outprodOBtnListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOBtnListFragment"
+        android:label="fragment_outprod_o_btn_list"
+        tools:layout="@layout/fragment_outprod_o_btn_list" >
+        <action
+            android:id="@+id/action_outprodOBtnListFragment_to_outprodOPackingListFragment"
+            app:destination="@id/outprodOPackingListFragment" />
+        <action
+            android:id="@+id/action_outprodOBtnListFragment_to_outprodOEndScanFragment"
+            app:destination="@id/outprodOEndScanFragment" />
+        <action
+            android:id="@+id/action_outprodOBtnListFragment_to_outprodOCaseListFragment"
+            app:destination="@id/outprodOCaseListFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_outprodOCaseListFragment"
+        app:destination="@+id/outprodOCaseListFragment"
+        app:popUpTo="@id/outprodOBtnListFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <action
+        android:id="@+id/action_outprodOpackingListFragment"
+        app:destination="@+id/outprodOPackingListFragment"
+        app:popUpTo="@id/outprodOBtnListFragment"
+        app:popUpToInclusive="false"
+        />
+
+
+    <fragment
+        android:id="@+id/outprodOPackingListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOPackingListFragment"
+        android:label="fragment_outprod_o_packing_list"
+        tools:layout="@layout/fragment_outprod_o_packing_list" >
+        <action
+            android:id="@+id/action_outprodOPackingListFragment_to_outprodOPdetailListFragment"
+            app:destination="@id/outprodOPdetailListFragment" />
+        <action
+            android:id="@+id/action_outprodOPackingListFragment_to_outprodOItemScanFragment"
+            app:destination="@id/outprodOItemScanFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_outprodOPdetailListFragment"
+        app:destination="@+id/outprodOPdetailListFragment"
+        app:popUpTo="@id/outprodOPackingListFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <action
+        android:id="@+id/action_outprodOItemScanFragment"
+        app:destination="@+id/outprodOItemScanFragment"
+        app:popUpTo="@id/outprodOPackingListFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <action
+        android:id="@+id/action_outprodOPdetailScanFragment"
+        app:destination="@+id/outprodOPdetailScanFragment"
+        app:popUpTo="@id/outprodOPdetailListFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <action
+        android:id="@+id/action_outprodOPmsListFragment"
+        app:destination="@+id/outprodOPmsListFragment"
+        app:popUpTo="@id/outprodOItemScanFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <fragment
+        android:id="@+id/outprodOPdetailListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOPdetailListFragment"
+        android:label="fragment_outprod_o_pdetail_list"
+        tools:layout="@layout/fragment_outprod_o_pdetail_list" >
+        <action
+            android:id="@+id/action_outprodOPdetailListFragment_to_outprodOPdetailScanFragment"
+            app:destination="@id/outprodOPdetailScanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outprodOPdetailScanFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOPdetailScanFragment"
+        android:label="fragment_outprod_o_pdetail_scan"
+        tools:layout="@layout/fragment_outprod_o_pdetail_scan" >
+        <action
+            android:id="@+id/action_outprodOPdetailScanFragment_to_outprodOPackingOrderFragment"
+            app:destination="@id/outprodOPackingOrderFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outprodOEndScanFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOEndScanFragment"
+        android:label="fragment_outprod_o_end_scan"
+        tools:layout="@layout/fragment_outprod_o_end_scan" />
+    <fragment
+        android:id="@+id/sampleBtnListFragment"
+        android:name="com.example.vphipda.view.fragment.sample.SampleBtnListFragment"
+        android:label="fragment_sample_btn_list"
+        tools:layout="@layout/fragment_sample_btn_list" >
+        <action
+            android:id="@+id/action_sampleBtnListFragment_to_sampleOrderListFragment"
+            app:destination="@id/sampleOrderListFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_sampleOrderListFragment"
+        app:destination="@+id/sampleOrderListFragment"
+        app:popUpTo="@id/sampleBtnListFragment"
+        app:popUpToInclusive="false"
+        />
+
+    <fragment
+        android:id="@+id/sampleOrderListFragment"
+        android:name="com.example.vphipda.view.fragment.sample.SampleOrderListFragment"
+        android:label="fragment_sample_order_list"
+        tools:layout="@layout/fragment_sample_order_list" >
+        <action
+            android:id="@+id/action_sampleOrderListFragment_to_sampleScanInFragment"
+            app:destination="@id/sampleScanInFragment" />
+        <action
+            android:id="@+id/action_sampleOrderListFragment_to_sampleScanOutFragment"
+            app:destination="@id/sampleScanOutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sampleScanInFragment"
+        android:name="com.example.vphipda.view.fragment.sample.SampleScanInFragment"
+        android:label="fragment_sample_scan_in"
+        tools:layout="@layout/fragment_sample_scan_in" />
+    <fragment
+        android:id="@+id/sampleScanOutFragment"
+        android:name="com.example.vphipda.view.fragment.sample.SampleScanOutFragment"
+        android:label="fragment_sample_scan_out"
+        tools:layout="@layout/fragment_sample_scan_out" />
+    <fragment
+        android:id="@+id/inprodDetailListItemFragment"
+        android:name="com.example.vphipda.view.fragment.inprod.InprodDetailListItemFragment"
+        android:label="fragment_inprod_detail_list_item"
+        tools:layout="@layout/fragment_inprod_detail_list_item" />
+    <fragment
+        android:id="@+id/mainScanFragment"
+        android:name="com.example.vphipda.view.fragment.mainScan.MainScanFragment"
+        android:label="fragment_main_scan"
+        tools:layout="@layout/fragment_main_scan" />
+    <fragment
+        android:id="@+id/outprodOPackingOrderFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOPackingOrderFragment"
+        android:label="fragment_outprod_o_packing_order"
+        tools:layout="@layout/fragment_outprod_o_packing_order" />
+    <fragment
+        android:id="@+id/outprodOCaseListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOCaseListFragment"
+        android:label="fragment_outprod_o_case_list"
+        tools:layout="@layout/fragment_outprod_o_case_list" >
+        <action
+            android:id="@+id/action_outprodOCaseListFragment_to_outprodOCaseListDetailFragment"
+            app:destination="@id/outprodOCaseListDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outprodOCaseListDetailFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOCaseListDetailFragment"
+        android:label="fragment_outprod_o_case_list_detail"
+        tools:layout="@layout/fragment_outprod_o_case_list_detail" />
+    <fragment
+        android:id="@+id/outprodOItemScanFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOItemScanFragment"
+        android:label="fragment_outprod_o_item_scan"
+        tools:layout="@layout/fragment_outprod_o_item_scan" >
+        <action
+            android:id="@+id/action_outprodOItemScanFragment_to_outprodOPmsListFragment"
+            app:destination="@id/outprodOPmsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outprodOPmsListFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOPmsListFragment"
+        android:label="fragment_outprod_o_pms_list"
+        tools:layout="@layout/fragment_outprod_o_pms_list" >
+        <action
+            android:id="@+id/action_outprodOPmsListFragment_to_outprodOPmsListDetailFragment"
+            app:destination="@id/outprodOPmsListDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/outprodOPmsListDetailFragment"
+        android:name="com.example.vphipda.view.fragment.outprodO.outprodOPmsListDetailFragment"
+        android:label="fragment_outprod_o_pms_list_detail"
+        tools:layout="@layout/fragment_outprod_o_pms_list_detail" />
+
+</navigation>

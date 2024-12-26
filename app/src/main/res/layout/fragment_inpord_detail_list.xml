@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.fragment.inprod.InprodFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prodDetailList_ly_top"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/prodDetailList_home_btn"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="30dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/home_btn_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/house_solid2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+
+        <TextView
+            android:id="@+id/prodDetailList_tx_top"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="입고 품목 목록"
+            android:textColor="@color/white"
+            android:fontFamily="@font/nanumsquareneo_deb"
+            android:textSize="@dimen/h5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/home_btn_img"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prodDetailList_tb_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bd_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prodDetailList_ly_top">
+
+
+        <TextView
+            android:id="@+id/prodDetailList_th_cdItem"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/table_border_bottom"
+            android:fontFamily="@font/nanumsquareneo_deb"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/CD_ITEM"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/prodDetailList_th_qt_io"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/prodDetailList_th_qt_io"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/table_border_bottom"
+            android:fontFamily="@font/nanumsquareneo_deb"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/QT_IO"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toStartOf="@+id/prodDetailList_th_qt_ld"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/prodDetailList_th_cdItem"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/prodDetailList_th_qt_ld"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/table_border_bottom"
+            android:fontFamily="@font/nanumsquareneo_deb"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/QT_LD"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/prodDetailList_th_qt_io"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/prodDetail_ly_bt_list"
+        app:layout_constraintTop_toBottomOf="@id/prodDetailList_tb_row">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/pordDetailList_rv"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:listitem="@layout/rv_prod_detail_list"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/prodDetail_ly_bt_list"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+        <Button
+            android:id="@+id/prodDetailList_bt_back"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="품목 스캔"
+            android:textSize="@dimen/h5"
+            android:fontFamily="@font/nanumsquareneo_deb"
+            android:background="@drawable/table_border_state"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/prodDetailList_bt_cls"
+            android:gravity="center"
+            />
+
+        <Button
+            android:id="@+id/prodDetailList_bt_cls"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="입고 마감"
+            android:textSize="@dimen/h5"
+            android:fontFamily="@font/nanumsquareneo_deb"
+            android:background="@drawable/table_border_state"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/prodDetailList_bt_back"
+            android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

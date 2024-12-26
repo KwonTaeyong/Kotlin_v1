@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/box_list_ver_tx_margin"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/box_list_shape_round"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/box_list_ver_tx_margin"
+        >
+
+
+        <TextView
+            android:id="@+id/pkwo_list_nm_kor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="영업 담당"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/pkwo_list_ln_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/box_list_ver_tx_margin"
+            android:text="거래처 명"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/pkwo_list_nm_kor"
+            app:layout_constraintStart_toStartOf="@id/pkwo_list_nm_kor"
+            app:layout_constraintTop_toBottomOf="@id/pkwo_list_nm_kor"
+            />
+
+
+        <TextView
+            android:id="@+id/pkwo_list_no_io"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/box_list_ver_tx_margin"
+            android:text="수주 번호"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/pkwo_list_ln_partner"
+            app:layout_constraintStart_toStartOf="@id/pkwo_list_ln_partner"
+            app:layout_constraintTop_toBottomOf="@id/pkwo_list_ln_partner"
+            />
+
+
+
+        <TextView
+            android:id="@+id/pkwo_list_tx_nm_kor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="담당자"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/pkwo_list_nm_kor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/pkwo_list_nm_kor"
+            />
+
+
+
+        <TextView
+            android:id="@+id/pkwo_list_tx_ln_partner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="거래처 명"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:maxLength="20"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@+id/pkwo_list_ln_partner"
+            app:layout_constraintEnd_toEndOf="@+id/pkwo_list_tx_nm_kor"
+            app:layout_constraintStart_toStartOf="@+id/pkwo_list_tx_nm_kor"
+            app:layout_constraintTop_toTopOf="@+id/pkwo_list_ln_partner"
+            />
+
+        <TextView
+            android:id="@+id/pkwo_list_tx_no_io"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MTI2123242323"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:maxLength="15"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@+id/pkwo_list_no_io"
+            app:layout_constraintEnd_toEndOf="@+id/pkwo_list_tx_ln_partner"
+            app:layout_constraintStart_toStartOf="@+id/pkwo_list_tx_ln_partner"
+            app:layout_constraintTop_toTopOf="@+id/pkwo_list_no_io" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/box_list_ver_tx_margin"
+        android:layout_marginVertical="5dp"
+        android:background="@drawable/box_list_shape_round"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="@dimen/box_list_ver_tx_margin">
+
+
+        <TextView
+            android:id="@+id/movelist_lb_move_dt_io"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/MOVE_DT_IO"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+
+        <TextView
+            android:id="@+id/movelist_lb_move_no_io"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/box_list_ver_tx_margin"
+            android:text="@string/MOVE_NO_IO"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/movelist_lb_move_dt_io"
+            app:layout_constraintStart_toStartOf="@id/movelist_lb_move_dt_io"
+            app:layout_constraintTop_toBottomOf="@id/movelist_lb_move_dt_io" />
+
+        <TextView
+            android:id="@+id/prodlist_lb_O_SL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/box_list_ver_tx_margin"
+            android:text="@string/MOVE_O_SL"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/movelist_lb_move_dt_io"
+            app:layout_constraintStart_toStartOf="@id/movelist_lb_move_dt_io"
+            app:layout_constraintTop_toBottomOf="@id/movelist_lb_move_no_io" />
+
+        <TextView
+            android:id="@+id/prodlist_lb_I_SL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/box_list_ver_tx_margin"
+            android:text="@string/MOVE_I_SL"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/movelist_lb_move_dt_io"
+            app:layout_constraintStart_toStartOf="@id/movelist_lb_move_dt_io"
+            app:layout_constraintTop_toBottomOf="@id/prodlist_lb_O_SL" />
+
+        <TextView
+            android:id="@+id/movelist_tx_dt_io"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20230110"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/movelist_lb_move_dt_io"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/movelist_lb_move_dt_io" />
+
+        <TextView
+            android:id="@+id/movelist_tx_no_io"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MTI2123242323"
+            android:textColor="@color/black"
+            android:maxLength="15"
+            android:ellipsize="end"
+            app:layout_constraintBottom_toBottomOf="@+id/movelist_lb_move_no_io"
+            app:layout_constraintEnd_toEndOf="@+id/movelist_tx_dt_io"
+            app:layout_constraintStart_toStartOf="@+id/movelist_tx_dt_io"
+            app:layout_constraintTop_toTopOf="@+id/movelist_lb_move_no_io" />
+
+        <TextView
+            android:id="@+id/movelist_tx_o_sl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="대구창고"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/prodlist_lb_O_SL"
+            app:layout_constraintEnd_toEndOf="@+id/movelist_tx_no_io"
+            app:layout_constraintStart_toStartOf="@+id/movelist_tx_no_io"
+            app:layout_constraintTop_toTopOf="@+id/prodlist_lb_O_SL" />
+
+        <TextView
+            android:id="@+id/movelist_tx_i_sl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="서울창고"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@+id/prodlist_lb_I_SL"
+            app:layout_constraintEnd_toEndOf="@+id/movelist_tx_o_sl"
+            app:layout_constraintStart_toStartOf="@+id/movelist_tx_o_sl"
+            app:layout_constraintTop_toTopOf="@+id/prodlist_lb_I_SL" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_gravity="center"
+    android:paddingHorizontal="50dp"
+    android:paddingVertical="10dp"
+    android:layout_height="wrap_content"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="완포장 및 PMS 등록"
+        android:layout_marginTop="20dp"
+        android:textSize="17sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:id="@+id/dialog_title_tv" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="실측 중량"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:paddingVertical="5dp"
+        android:id="@+id/end_packing_et_w"
+        app:layout_constraintBottom_toTopOf="@+id/end_packing_et_z"
+        app:layout_constraintStart_toStartOf="@id/dialog_title_tv"
+        app:layout_constraintEnd_toEndOf="@id/dialog_title_tv"
+        android:background="@drawable/dialog_edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/dialog_title_tv" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="높이"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:paddingVertical="5dp"
+        android:id="@+id/end_packing_et_z"
+        app:layout_constraintBottom_toTopOf="@+id/end_packing_et_x"
+        app:layout_constraintStart_toStartOf="@id/end_packing_et_w"
+        app:layout_constraintEnd_toEndOf="@id/end_packing_et_w"
+        android:background="@drawable/dialog_edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/end_packing_et_w" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="가로"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:paddingVertical="5dp"
+        android:id="@+id/end_packing_et_x"
+        app:layout_constraintBottom_toTopOf="@+id/end_packing_et_y"
+        app:layout_constraintStart_toStartOf="@id/end_packing_et_w"
+        app:layout_constraintEnd_toEndOf="@id/end_packing_et_w"
+        android:background="@drawable/dialog_edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/end_packing_et_z" />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:hint="세로"
+        android:paddingStart="10dp"
+        android:inputType="number"
+        android:digits="0123456789."
+        android:paddingVertical="5dp"
+        android:id="@+id/end_packing_et_y"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/end_packing_et_w"
+        app:layout_constraintEnd_toEndOf="@id/end_packing_et_w"
+        android:background="@drawable/dialog_edittext_background"
+        app:layout_constraintTop_toBottomOf="@id/end_packing_et_x" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

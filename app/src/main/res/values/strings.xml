@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">VPHIPda</string>
+
+    <string name="test_scan2">테스트 스캔2</string>
+    <string name="test_scan">테스트 스캔</string>
+    <string name="in_Prod">구매 입고</string>
+    <string name="in_ProdList">입고 목록</string>
+    <string name="move_Prod">이동 입고</string>
+    <string name="worklist_Prod">작업 지시서</string>
+    <string name="out_Prod">출고</string>
+    <string name="moveWH_Prod">창고내 이동</string>
+    <string name="android_info">기기 정보</string>
+    <string name="android_id">None</string>
+    <string name="DT_IO">입고 일자</string>
+    <string name="NO_IO">입고 번호</string>
+    <string name="LN_PARTNER">거래처</string>
+    <string name="CD_PLANT">공장 명</string>
+    <string name="CD_ITEM">품목 코드</string>
+    <string name="NM_ITEM">품목 명</string>
+    <string name="QT_IO">입고 수량</string>
+    <string name="QT_LD">저장 수량</string>
+    <string name="MOVE_QT_LD">이동 수량</string>
+    <string name="MOVE_NO_IO">이동 번호</string>
+    <string name="MOVE_DT_IO">지시 일자</string>
+    <string name="MOVE_I_SL">입고 창고</string>
+    <string name="MOVE_O_SL">출고 창고</string>
+    <string name="SAVE_ITEM">저장</string>
+    <string name="OUT_ITEM">반출</string>
+    <string name="AlertS">전송 성공</string>
+    <string name="AlertE">전송 실패</string>
+    <string name="AlertF">서버와 연결할 수 없습니다.</string>
+
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

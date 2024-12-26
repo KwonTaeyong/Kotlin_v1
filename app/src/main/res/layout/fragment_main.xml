@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".view.fragment.MainFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/bg_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/mainLogoImg"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/vphi_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/scan_btn_img"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/white"
+            android:background="@drawable/scan_img"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scan_btn"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:paddingVertical="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+    <RelativeLayout
+        android:id="@+id/in_prod_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintVertical_bias="0.05">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_in_prod_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+            <Button
+                android:id="@+id/in_prod_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/add_96"
+                android:background="@drawable/box_shape_round"
+                android:text="@string/in_Prod"
+                android:textStyle="bold"
+                android:textSize="@dimen/main_tx_size"
+                android:backgroundTint="@color/now_color"
+                ></Button>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/in_prod_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_in_prod_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/moveWH_prod_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/out_prod_ly"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/in_prod_ly"
+        app:layout_constraintVertical_bias="0.3">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_moveWH_prod_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/moveWH_prod_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/outside_96"
+                android:background="@drawable/box_shape_round"
+                android:text="이동 처리"
+                android:textStyle="bold"
+                android:textSize="@dimen/main_tx_size"
+                />
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/moveWH_prod_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_moveWH_prod_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:text="27"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/out_prod_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/inven_ly"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/moveWH_prod_ly"
+        app:layout_constraintVertical_bias="0.55">
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_out_prod_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/out_prod_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/out_96"
+                android:background="@drawable/box_shape_round"
+                android:text="국내 출고"
+                android:textSize="@dimen/main_tx_size"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/out_prod_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_out_prod_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:text="27"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/inven_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintVertical_bias="0.95"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_inven_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/inven_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/inven_48"
+                android:background="@drawable/box_shape_round"
+                android:text="재고 실사"
+                android:textSize="@dimen/main_tx_size"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/inven_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_inven_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:text="27"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/move_prod_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/in_prod_ly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/in_prod_ly"
+        app:layout_constraintVertical_bias="0.1"
+        >
+
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_move_prod_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/move_prod_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/move_96"
+                android:background="@drawable/box_shape_round"
+                android:text="@string/move_Prod"
+                android:textSize="@dimen/main_tx_size" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/move_prod_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_move_prod_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:text="27"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/sample_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/moveWH_prod_ly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@id/moveWH_prod_ly"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_sample_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/android_sample_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/worklist_96"
+                android:background="@drawable/box_shape_round"
+                android:text="샘플/반품"
+                android:textSize="@dimen/main_tx_size" />
+
+        </RelativeLayout>
+
+
+
+        <TextView
+            android:id="@+id/sample_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_sample_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:text="27"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/worklist_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/out_prod_ly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@id/out_prod_ly"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_worklist_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/worklist_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/out_96"
+                android:background="@drawable/box_shape_round"
+                android:text="해외 출고"
+                android:textSize="@dimen/main_tx_size" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/worklist_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_worklist_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/inven_ly"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="@id/inven_ly"
+        app:layout_constraintVertical_bias="0.5">
+
+        <RelativeLayout
+            android:id="@+id/relative_layout_info_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/info_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/main_btn_h_size"
+                android:drawableLeft="@drawable/android_info_96"
+                android:background="@drawable/box_shape_round"
+                android:text="기기 정보"
+                android:textSize="@dimen/main_tx_size" />
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/info_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/relative_layout_info_btn"
+            android:background="@android:drawable/ic_notification_overlay"
+            android:padding="5dp"
+            android:textColor="#FFF"
+            android:textSize="@dimen/main_bg_tx_size"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
